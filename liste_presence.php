@@ -8,44 +8,117 @@
         <script src="main.js"></script>
 
         <style type="text/css">
-           body
+            body
             {
-                display: flex;
-                flex-direction:column;
-                justify-content:center;
-                align-items:center ;
+                padding : 0px;
+                margin : 0px; 
             }
-            form
-            {
-                display:grid;
-                padding:2em; 
+            fieldset{
+                margin-top: 70px;
+                width: 27%;
+                background-color: #318CE7;
+                box-shadow: 5px 5px 20px 1px 1px rgb(85,85,85);
+                border: 0px;
+                padding-left: 10px;
+                border-radius: 10px 10px 10px;
+                color:white ;
+                height: 430px;
             }
-            form input, label
-            {
-                margin:0,2em;
-                padding:0,2em;
+            td{
+                letter-spacing: 1px;
             }
+            h1{
+                font-family:andalus ;
+                letter-spacing: 3px;
+                text-align: center;
+                color:white;
+
+            }
+            hr{
+                border: 5px solid white;
+                border-radius: 10px;
+                width: 50%;
+            }
+            ul li{
+                margin-left: 20px;
+                color: white;
+            }
+            #submit{
+               margin:20px 35px;
+               color: #318CE7;
+               background-color: white;
+               width: 80%;
+               font-size: 17px;
+               border-radius: 20px;
+               border: 1px solid white; 
+               padding: 10px;
+            }
+            #submit:hover{
+                color: white ;
+                background-color: #318CE7;
+            }
+            input{
+                font-size: 16px;
+                border: none;
+                outline: non;
+                background: none;
+                border-bottom: 1px solid white;
+                color: white;
+                width: 100%;
+            }
+
+            
         </style>
     </head>
     <body>
-        <h1> Enregistrez - vous en tant que participant </h1>
-        <form action="" method="POST">
-            <label for="" class="form"> Nom : </label>
-            <input type="text" name="nom">
-
-            <label for="" class="form"> Prénoms : </label>
-            <input type="text" name="prenom">
-
-            <label for="" class="form"> Numéro : </label>
-            <input type="text" name="numero">
-
-            <label for="" class="form"> Adresse : </label>
-            <input type="text" name="adresse">
-
-            <input type="submit" value="ENVOYER" name="envoyer" class="boton">
-        </form>
-
-        <?php
+        <center>
+            
+        <fieldset style="width:50%;">
+            <form action="" method="POST">
+                <h1> Enregistrez - vous en tant que participant </h1>
+                <hr>
+                <table>
+                    <tr>
+                        <td>
+                            Nom :
+                        </td>
+                        <td>
+                            <input type="text" name="nom"><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Prénoms :
+                        </td>
+                        <td>
+                            <input type="text" name="prenom"><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Numéros :
+                        </td>
+                        <td>
+                            <input type="tel" name="numero"><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Adresse :
+                        </td>
+                        <td>
+                            <input type="text" name="adresse"><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" id="submit" value="ENVOYER" name="envoyer">
+                        </td>
+                    </tr>
+                    
+                </table> 
+            </form>
+            <?php
             $con = mysqli_connect('localhost','root','');
             if(!$con){
                 echo"La connexion a échoué";
@@ -69,6 +142,10 @@
                 }
             }
         ?>
-        <p> <a href="essaie.php"> Afficher la liste des participants </a></p>
+        </fieldset>
+        </center>
+
+        
+        <center> <p> <a href="essaie.php"> Afficher la liste des participants </a></p> </center>
     </body>
 </html>
