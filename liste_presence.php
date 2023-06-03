@@ -28,6 +28,7 @@
         </style>
     </head>
     <body>
+        <h1> Enregistrez - vous en tant que participant </h1>
         <form action="" method="POST">
             <label for="" class="form"> Nom : </label>
             <input type="text" name="nom">
@@ -68,5 +69,6 @@
                 }
             }
         ?>
+        <p> <a href="essaie.php"> Afficher la liste des participants </a></p>
     </body>
 </html>
